@@ -1,0 +1,208 @@
+/**
+ * Case-study catalogue, built from the AI showreel and its source clips.
+ * Order matters: it drives the "More Work" picks on project pages and the
+ * "All case studies" lists. `video` is the media id under /public/video.
+ */
+export const PROJECTS = [
+  {
+    slug: 'showreel',
+    client: 'Glocal AI Studio',
+    title: 'AI Showreel',
+    category: 'Showreel',
+    year: '2026',
+    poster: '/posters/showreel.webp',
+    heroPoster: '/posters/showreel-hero.webp',
+    tags: ['Showreel', '11 Categories', 'Sound On'],
+    brief:
+      'Seventy-two seconds across eleven categories: automotive, product, fashion, food and beverage, architecture, cinematic worlds, surreal VFX, experiential visuals, brand films, storytelling and animation. Every frame AI-native.',
+    vertical: false,
+    video: 'showreel',
+  },
+  {
+    slug: 'tata-tea',
+    client: 'Tata Tea',
+    title: 'The Tea Stall',
+    category: 'Brand Film',
+    year: '2026',
+    poster: '/posters/tata-tea.webp',
+    heroPoster: '/posters/tata-tea-hero.webp',
+    tags: ['Brand Films', 'TVC', 'FMCG'],
+    brief:
+      'A 40-second commercial set at a roadside tea stall at sunrise: friends, elders, the kettle, the pour, and a pack of Tata Tea Agni at the centre of it all.',
+    vertical: false,
+    video: 'tata-tea',
+  },
+  {
+    slug: 'automotive',
+    client: 'Automotive',
+    title: 'Canyon Run',
+    category: 'Brand Film',
+    year: '2026',
+    poster: '/posters/automotive.webp',
+    heroPoster: '/posters/automotive-hero.webp',
+    tags: ['Automotive', 'Hypercar', 'Golden Hour'],
+    brief:
+      'A hypercar carving a mountain pass at golden hour: wheel-level tracking, a high drone follow and a low rear chase, cut like a launch film.',
+    vertical: false,
+    video: 'automotive',
+  },
+  {
+    slug: 'fashion',
+    client: 'Fashion',
+    title: 'The Black Dress',
+    category: 'Brand Film',
+    year: '2026',
+    poster: '/posters/fashion.webp',
+    heroPoster: '/posters/fashion-hero.webp',
+    tags: ['Fashion', 'Editorial', 'Motion'],
+    brief: 'An editorial walk through sunlit concrete arches: fabric in motion, a hand-held detail pass and a soft close-up, graded warm.',
+    vertical: false,
+    video: 'fashion',
+  },
+  {
+    slug: 'architecture',
+    client: 'Architecture',
+    title: 'Hillside Residence',
+    category: 'Brand Film',
+    year: '2026',
+    poster: '/posters/architecture.webp',
+    heroPoster: '/posters/architecture-hero.webp',
+    tags: ['Architecture', 'Real Estate', 'Interiors'],
+    brief: 'A slow architectural walk-through from stone-walled living room to infinity pool and mountain view, lit by late-afternoon sun.',
+    vertical: false,
+    video: 'architecture',
+  },
+  {
+    slug: 'storytelling',
+    client: 'Storytelling',
+    title: 'Last Train',
+    category: 'Micro Drama',
+    year: '2026',
+    poster: '/posters/storytelling.webp',
+    heroPoster: '/posters/storytelling-hero.webp',
+    tags: ['Storytelling', 'Drama', 'Dialogue'],
+    brief: 'Two people on a rain-soaked platform as the last train approaches. A thirty-second dialogue scene built on performance, eyelines and bokeh.',
+    vertical: false,
+    video: 'storytelling',
+  },
+  {
+    slug: 'animation',
+    client: 'Animation',
+    title: 'The Young Samurai',
+    category: 'AI Native Film',
+    year: '2026',
+    poster: '/posters/animation.webp',
+    heroPoster: '/posters/animation-hero.webp',
+    tags: ['Animation', 'Anime', 'Series'],
+    brief:
+      'A hand-drawn-style anime opening: a young swordsman, his elder and a boy at a lantern-lit village gate at dusk, with the katana drawn in the final beat.',
+    vertical: false,
+    video: 'animation',
+  },
+  {
+    slug: 'cinematic-worlds',
+    client: 'Cinematic Worlds',
+    title: 'Last Walk Home',
+    category: 'AI Native Film',
+    year: '2026',
+    poster: '/posters/cinematic-worlds.webp',
+    heroPoster: '/posters/cinematic-worlds-hero.webp',
+    tags: ['Cinematic Worlds', 'Sci-Fi', 'World Building'],
+    brief:
+      'An astronaut walks a flooded, abandoned city street in the rain. Wide, over-the-shoulder and a helmet close-up with the ruins reflected in the visor.',
+    vertical: false,
+    video: 'cinematic-worlds',
+  },
+  {
+    slug: 'surreal-vfx',
+    client: 'Surreal VFX',
+    title: 'Whale Over Fifth',
+    category: 'AI Native Film',
+    year: '2026',
+    poster: '/posters/surreal-vfx.webp',
+    heroPoster: '/posters/surreal-vfx-hero.webp',
+    tags: ['Surreal VFX', 'Fantasy', 'City'],
+    brief: 'A humpback whale drifts between Manhattan towers above the traffic, seen from the street, from above and from directly beneath its tail.',
+    vertical: false,
+    video: 'surreal-vfx',
+  },
+  {
+    slug: 'product-films',
+    client: 'Product Films',
+    title: 'Chronograph',
+    category: 'Ad Creative',
+    year: '2026',
+    poster: '/posters/product-films.webp',
+    heroPoster: '/posters/product-films-hero.webp',
+    tags: ['Product Films', 'Luxury', 'Macro'],
+    brief: 'A luxury chronograph revealed through macro passes over the dial, steam and water on black stone, and a slow pull-back to the full watch.',
+    vertical: false,
+    video: 'product-films',
+  },
+  {
+    slug: 'food-and-beverage',
+    client: 'Food & Beverage',
+    title: 'Ice Cold',
+    category: 'Ad Creative',
+    year: '2026',
+    poster: '/posters/food-and-beverage.webp',
+    heroPoster: '/posters/food-and-beverage-hero.webp',
+    tags: ['Food & Beverage', 'Product Launch', 'Splash'],
+    brief: 'A chilled black can, condensation beading in macro, then ice and water exploding around it in slow motion against a cool blue key.',
+    vertical: false,
+    video: 'food-and-beverage',
+  },
+  {
+    slug: 'experiential-visuals',
+    client: 'Experiential Visuals',
+    title: 'Mainstage',
+    category: 'Social',
+    year: '2026',
+    poster: '/posters/experiential-visuals.webp',
+    heroPoster: '/posters/experiential-visuals-hero.webp',
+    tags: ['Experiential Visuals', 'Live Events', 'Festival'],
+    brief: 'A festival mainstage at night: crowd silhouettes, a cathedral of LED screens, pyrotechnics and a slow aerial reveal of the full stage.',
+    vertical: false,
+    video: 'experiential-visuals',
+  },
+  {
+    slug: 'kinetic-sculpture',
+    client: 'Motion Design',
+    title: 'Möbius',
+    category: 'Social',
+    year: '2026',
+    poster: '/posters/kinetic-sculpture.webp',
+    heroPoster: '/posters/kinetic-sculpture-hero.webp',
+    tags: ['3D', 'Motion Design', 'Loop'],
+    brief: 'A brushed-steel Möbius form turning in a concrete gallery under a single shaft of light. Built as a seamless loop for idents and backgrounds.',
+    vertical: false,
+    video: 'kinetic-sculpture',
+  },
+]
+
+export const WORK_CATEGORIES = ['Showreel', 'Brand Film', 'AI Native Film', 'Micro Drama', 'Ad Creative', 'Social']
+
+export function getProject(slug) {
+  return PROJECTS.find((p) => p.slug === slug)
+}
+
+/** Subset shown in the homepage "Stories That Move." rail (the reel itself is the hero). */
+const HOME_WORK_ORDER = [
+  'automotive',
+  'tata-tea',
+  'storytelling',
+  'animation',
+  'product-films',
+  'fashion',
+  'cinematic-worlds',
+  'food-and-beverage',
+  'surreal-vfx',
+  'architecture',
+  'experiential-visuals',
+  'kinetic-sculpture',
+]
+
+export const HOME_WORK = HOME_WORK_ORDER.map((slug) => {
+  const p = getProject(slug)
+  return { id: p.slug, client: p.client, title: p.title, category: p.category, video: p.video, poster: p.poster, aspect: '16/9' }
+})

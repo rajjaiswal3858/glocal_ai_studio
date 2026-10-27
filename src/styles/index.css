@@ -1,0 +1,209 @@
+/*
+ * Global stylesheet.
+ * Rebuilt from the original site's compiled Tailwind v4 output: same theme
+ * tokens, the same base/component layers and the same keyframes, so the
+ * utility class names used in the components resolve to identical CSS.
+ */
+@import './fonts.css';
+@import 'tailwindcss';
+
+@theme {
+  --color-bg-primary: #080808;
+  --color-bg-secondary: #080808;
+  --color-text-primary: #F2E4C2;
+  --color-white: #F2E4C2;
+
+  --font-display: 'EB Garamond', 'EB Garamond Fallback';
+  --font-body: 'DM Sans', 'DM Sans Fallback';
+  /* Brand fonts behind Tailwind's generic utilities too, so font-sans/font-serif never fall back to system fonts. */
+  --font-sans: 'DM Sans', 'DM Sans Fallback', sans-serif;
+  --font-serif: 'EB Garamond', 'EB Garamond Fallback', Georgia, serif;
+
+  --text-display: clamp(38px, 5.5vw, 86px);
+  --text-heading: clamp(28px, 3.5vw, 56px);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    color: #F2E4C2;
+    scroll-behavior: smooth;
+  }
+  body,
+  html {
+    background-color: #080808;
+    overflow-x: clip;
+  }
+  body {
+    min-height: 100vh;
+    font-family: 'DM Sans', 'Inter', sans-serif;
+  }
+  ::selection {
+    color: #080808;
+    background: #DCAB59;
+  }
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080808;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+  }
+}
+
+@layer components {
+  .grain:after {
+    content: '';
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    width: 200%;
+    height: 200%;
+    animation: grain 0.5s step-end infinite;
+    position: absolute;
+    inset: -50%;
+  }
+  .text-gradient {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(105deg, #FCF8DD, #DCAB59 35%, #FCF8DD 55%, #B8873A 75%, #FCF8DD) 0 0/200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+  .accent-line {
+    background: rgba(220, 171, 89, 0.5);
+    width: 32px;
+    height: 1px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .section-label {
+    color: #B08A4A;
+  }
+  .section-label,
+  .section-label-light {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'DM Sans', 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .section-label-light {
+    color: rgba(242,228,194, 0.4);
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .clip-reveal {
+    display: inline-block;
+    overflow: hidden;
+  }
+  .ambient-orb-red {
+    filter: blur(40px);
+    background: radial-gradient(circle, #dcab591f 0, #0000 70%);
+    width: 600px;
+    height: 600px;
+    animation: orb-drift 12s ease-in-out infinite;
+  }
+  .ambient-orb-red,
+  .ambient-orb-teal {
+    pointer-events: none;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .ambient-orb-teal {
+    filter: blur(60px);
+    background: radial-gradient(circle, #dcab5926 0, #0000 70%);
+    width: 400px;
+    height: 400px;
+    animation: orb-drift 16s ease-in-out infinite alternate-reverse;
+  }
+}
+
+/* Unlayered on purpose so it outranks the utility classes it overrides. */
+/* Hover-only captions are shown outright on touch screens (no hover available). */
+@media (hover: none) {
+  .touch-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes logoScroll {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-50%);
+  }
+}
+
+@keyframes grain {
+  0%,
+  to {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-2%, -3%);
+  }
+  20% {
+    transform: translate(3%, 1%);
+  }
+  30% {
+    transform: translate(-1%, 4%);
+  }
+  40% {
+    transform: translate(2%, -2%);
+  }
+  50% {
+    transform: translate(-3%, 3%);
+  }
+  60% {
+    transform: translate(1%, -1%);
+  }
+  70% {
+    transform: translate(-2%, 2%);
+  }
+  80% {
+    transform: translate(3%, -3%);
+  }
+  90% {
+    transform: translate(-1%, 1%);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  to {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100%;
+  }
+}
+
+@keyframes orb-drift {
+  0% {
+    transform: translate(0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 15px) scale(0.95);
+  }
+  to {
+    transform: translate(0) scale(1);
+  }
+}
